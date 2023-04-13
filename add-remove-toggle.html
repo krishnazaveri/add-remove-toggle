@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/remove/toggle css</title>
+    <style>
+        button {
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .x {
+            color: blue;
+            background-color: lightblue;
+            
+        }
+
+        .y 
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="h1">Krishna Zaveri</h1>
+
+    <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda asperiores ab culpa deleniti veritatis fuga aut fugiat nulla. 
+        Cumque tempore ipsam velit voluptatibus consequuntur temporibus aut ratione, delectus vel nostrum?
+    </p>
+
+    <button onclick="addcss()">Add css</button>
+    <button onclick="removecss()">Remove css</button>
+    <button onclick="addremovecss()">Add/Remove css</button>
+    <button onclick="test()">Toggle Class</button>
+
+    <script>
+        p=document.getElementById("para");
+        function addcss()
+        {
+
+            p.classList.add ('x')
+        }
+
+        function removecss()
+        {
+
+            p.classList.remove ('x')
+        }
+
+        function addremovecss()
+        {
+
+            p.classList.toggle ('x')
+        }
+
+        h1=document.getElementById("h1");
+
+        function test()
+        {
+            h1.classList.toggle('y');
+        }
+
+    </script>
+
+    
+</body>
+</html>
